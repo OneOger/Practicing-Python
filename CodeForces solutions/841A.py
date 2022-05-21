@@ -1,6 +1,24 @@
 # CodeForces
 # 841A
 
+# Option 1 - using dictionary:
+
+baloons, friends = map(int,input().split())
+colors = input()
+slovar = {}
+
+for i in colors:
+    slovar[i] = slovar.get(i, 0) + 1
+
+if max(slovar.values()) > friends:
+    print('NO')
+else:
+    print('YES')
+
+
+# Option 2 - using counting sort:
+
+
 n, k = map(int, input().split())
 balloons = input()
 count = [0] * 26
